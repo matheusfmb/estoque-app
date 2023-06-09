@@ -8,8 +8,9 @@
     <title>Controle de Estoque</title>
 </head>
 <body>
+<div class="container"></div>
     <h1 style="text-align: center">Listagem de Produtos<h1>
-        <table class="container table table-striped table-bordered table-hover">
+        <table class="table table-striped table-bordered table-hover">
     <thead>
         <tr>
         <th scope="col">ID</th>
@@ -27,7 +28,7 @@
         <td><?= $p->preco ?></td>
         <td><?= $p->quantidade ?></td>
         <td>
-            <a href="/produtos/mostra?id={{$p->id}}">
+            <a href="/produtos/mostra/{{$p->id}}">
                 <i class="fa-solid fa-magnifying-glass" style="color: #808080;"></i>
             </a>
         </td>
@@ -35,5 +36,6 @@
         @endforeach
     </tbody>
     </table>
+</div>
 </body>
 </html>

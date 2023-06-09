@@ -13,9 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view ('home');
+});
+
+Route::get('/home', function () {
+    return view ('home_app');
+});
+
+Route::get('/login', function () {
+    return view ('login');
+});
 
 Route::get('/produtos', 'App\Http\Controllers\ProdutoController@lista');
-Route::get('/produtos/mostra', 'App\Http\Controllers\ProdutoController@mostra');
+
+// O ID É OBRIGATÓRIO NA ROTA.
+Route::get('/produtos/mostra/{id}', 'App\Http\Controllers\ProdutoController@mostra')-> where('id','[0-9]+');
+
+// O ID NÃO É OBRIGATÓRIO.
+// Route::get('/produtos/mostra/{id?}', 'App\Http\Controllers\ProdutoController@mostra');

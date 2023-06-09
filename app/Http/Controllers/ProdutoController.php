@@ -19,12 +19,23 @@ class ProdutoController extends BaseController
         
     }
 
-    public function mostra(){
-        $id = request()->input('id');
+    public function mostra($id){
         $resposta = DB::select('select * from produtos where id = ?', [$id]);
         if(empty($resposta)){
             return "Esse produto não existe";
         }
         return view('detalhes')-> with ('p', $resposta[0]);
+
+
+        // ALL - ONLY E EXCEPT PARA REQUEST.
+
+        // lista todos os params 
+        // $input = Request::all();
+
+        // apenas nome e id
+        // $input = Request::only(’nome’, ’id’); 
+
+        // todos os params, menos o id
+        // $input = Request::except(’id’);
     }
 }
