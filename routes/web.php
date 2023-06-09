@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/produtos', 'App\Http\Controllers\ProdutoController@lista');
+Route::get('/produtos/mostra', 'App\Http\Controllers\ProdutoController@mostra');
