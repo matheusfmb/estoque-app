@@ -27,8 +27,11 @@ Route::get('/login', function () {
 
 Route::get('/produtos', 'App\Http\Controllers\ProdutoController@lista');
 
-// O ID É OBRIGATÓRIO NA ROTA.
-Route::get('/produtos/mostra/{id}', 'App\Http\Controllers\ProdutoController@mostra')-> where('id','[0-9]+');
+
+
+// ROTAS DA FUNCIONALIDADE DE DETALHES. NÃO É MAIS NECESSÁRIO
+// // O ID É OBRIGATÓRIO NA ROTA.
+// Route::get('/produtos/mostra/{id}', 'App\Http\Controllers\ProdutoController@mostra')-> where('id','[0-9]+');
 
 // O ID NÃO É OBRIGATÓRIO.
 // Route::get('/produtos/mostra/{id?}', 'App\Http\Controllers\ProdutoController@mostra');

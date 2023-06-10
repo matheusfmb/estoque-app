@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,13 +7,14 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Estoque User</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Estoque FMB</a>
+            <a class="navbar-brand ps-3" href="/home">Estoque FMB</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -25,7 +26,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Configurações</a></li>
+                        <li><a class="dropdown-item" href="#">Configurações</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="/">Logout</a></li>
                     </ul>
@@ -41,7 +42,7 @@
                             <a class="nav-link" href="charts.html"><div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-user" style="color: #808080;"></i>
                                 </div>Listar Usuarios</a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="/produtos">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-table" style="color: #808080;"></i></div>Listar Produtos</a>
                             <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-plus" style="color: #808080;"></i></div>Adicionar Produto</a> 
@@ -52,42 +53,35 @@
 
                         </div>
                     </div>
-
                     {{-- Retornar usuário LOGADO AQUI --}}
                     <div class="sb-sidenav-footer">
                         <div class="small">Logado como:</div>
-                        João Pedro
+                        User ?
                     </div>
-
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Painel de Controle</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Estoque FMB</li>
-                        </ol>
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <p class="mb-0">
-                                    Painel de Controle do projeto de estoque
-                                    <code>PHP + Laravel</code>
-                                    Aqui você encontra dashboard com as funcionalidades de listagem, adição, subtração e atualização de produtos e listagem de usuários.
-                                </p>
-                            </div>
-                        </div>
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; EstoqueFMB</div>
-                        </div>
-                    </div>
-                </footer>
+                            <p class="breadcrumb-item active">Estoque FMB</p>
+                            <p>
+                                Painel de Controle do projeto de estoque
+                                <code>PHP + Laravel</code>
+                                Aqui você encontra o dashboard com as funcionalidades de listagem, adição, subtração e atualização de produtos e listagem de usuários.
+                            </p>
+                @yield('conteudo')
             </div>
         </div>
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; EstoqueFMB</div>
+                </div>
+            </div>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+        <script src="js/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>

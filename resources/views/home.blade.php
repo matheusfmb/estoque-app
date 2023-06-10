@@ -30,7 +30,10 @@
             <div class="container px-4 text-center">
                 <h1 class="fw-bolder">Sistema de controle de Estoque</h1>
                 <p class="lead">Sistema de controle de estoque desenvolvido com PHP + Laravel</p>
-                <a class="btn btn-lg btn-light" href="#about">Sobre o Projeto!</a>
+                <div class="d-flex justify-content-center">
+                    <i class="fa-brands fa-php fa-4x" title="PHP"></i>
+                    <i  style="padding-left: 50px" title="Laravel" class="fa-brands fa-laravel fa-4x"></i>
+                </div>
             </div>
         </header>
         <!-- About section-->
