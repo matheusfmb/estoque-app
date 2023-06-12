@@ -27,6 +27,11 @@ Route::get('/login', function () {
 
 Route::get('/produtos', 'App\Http\Controllers\ProdutoController@lista');
 
+Route::get('/produtos/novo', function () {
+    return view ('produtos/cadastro_produtos');
+});
+
+Route::post('/produtos/adiciona', 'App\Http\Controllers\ProdutoController@cadastrarProduto');
 
 
 // ROTAS DA FUNCIONALIDADE DE DETALHES. NÃO É MAIS NECESSÁRIO

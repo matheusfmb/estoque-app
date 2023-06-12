@@ -7,6 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Estoque User</title>
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -39,18 +40,16 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Manager</div>
-                            <a class="nav-link" href="charts.html"><div class="sb-nav-link-icon">
+                            <a class="nav-link" href="#"><div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-user" style="color: #808080;"></i>
                                 </div>Listar Usuarios</a>
-                            <a class="nav-link" href="/produtos">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-table" style="color: #808080;"></i></div>Listar Produtos</a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-plus" style="color: #808080;"></i></div>Adicionar Produto</a> 
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-trash" style="color: #808080;"></i></div>Remover Produto</a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-pen-to-square" style="color: #808080;"></i></div>Alterar Produto</a>
+                            <a class="nav-link" href="/produtos"><div class="sb-nav-link-icon"><i class="fa-solid fa-table" style="color: #808080;"></i></div>Listar Produtos</a>
 
+                            <a class="nav-link" href="/produtos/novo"><div class="sb-nav-link-icon"><i class="fa-solid fa-plus" style="color: #808080;"></i></div>Adicionar Produto</a> 
+
+                            <a class="nav-link" href="#"><div class="sb-nav-link-icon"><i class="fa-solid fa-trash" style="color: #808080;"></i></div>Remover Produto</a>
+                            
+                            <a class="nav-link" href="#"><div class="sb-nav-link-icon"><i class="fa-solid fa-pen-to-square" style="color: #808080;"></i></div>Alterar Produto</a>
                         </div>
                     </div>
                     {{-- Retornar usuário LOGADO AQUI --}}
@@ -64,11 +63,6 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Painel de Controle</h1>
                             <p class="breadcrumb-item active">Estoque FMB</p>
-                            <p>
-                                Painel de Controle do projeto de estoque
-                                <code>PHP + Laravel</code>
-                                Aqui você encontra o dashboard com as funcionalidades de listagem, adição, subtração e atualização de produtos e listagem de usuários.
-                            </p>
                 @yield('conteudo')
             </div>
         </div>
@@ -80,8 +74,8 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        <script src="{{ asset('js\scripts.js') }}"></script>
+        <script src="js\simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js\datatables-simple-demo.js"></script>
     </body>
 </html>

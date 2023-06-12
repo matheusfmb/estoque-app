@@ -7,12 +7,12 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Login</title>
-        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b88bdd215f.js" crossorigin="anonymous"></script>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="bg-primary">
+
          <!-- Navigation-->
          <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
@@ -25,6 +25,7 @@
                 </div>
             </div>
         </nav>
+
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -63,6 +64,6 @@
             </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="{{ asset('js/scripts.js') }}"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
